@@ -13,8 +13,6 @@ Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: evolution-devel >= 2.5
 BuildRequires: evolution-data-server-devel >= 1.5
-BuildRequires: libgnomeprintui-devel
-BuildRequires: libgtkhtml-3.8-devel
 BuildRequires: mono-devel
 BuildRequires: gtk-sharp2
 Requires: evolution
