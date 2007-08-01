@@ -14,7 +14,7 @@ BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: evolution-devel >= 2.5
 BuildRequires: evolution-data-server-devel >= 1.5
 BuildRequires: mono-devel
-BuildRequires: gtk-sharp2
+BuildRequires: gtk-sharp2-devel
 Requires: evolution
 
 %description
