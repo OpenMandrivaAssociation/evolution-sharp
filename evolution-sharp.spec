@@ -10,6 +10,7 @@ Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 License: GPL
 Group: Development/Other
 Url: http://www.gnome.org
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: evolution-devel >= 2.5
 BuildRequires: evolution-data-server-devel >= 1.5
 BuildRequires: mono-devel
