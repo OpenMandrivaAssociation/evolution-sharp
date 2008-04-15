@@ -1,5 +1,5 @@
 %define name evolution-sharp
-%define version 0.16.0
+%define version 0.16.1
 %define release %mkrel 1
 
 Summary: Evolution C# bindings for mono
@@ -7,9 +7,6 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-#gw revert wrong usage of libdir introduced here:
-# http://bugzilla.gnome.org/show_bug.cgi?id=516044
-Patch: evolution-sharp-0.15.92-no-libdir.patch
 License: GPL
 Group: Development/Other
 Url: http://www.gnome.org
@@ -27,8 +24,6 @@ libraries.
 
 %prep
 %setup -q
-%patch -p1
-autoreconf
 
 %build
 %configure2_5x
