@@ -1,5 +1,5 @@
 %define name evolution-sharp
-%define version 0.16.1.1
+%define version 0.17.4
 %define release %mkrel 1
 
 Summary: Evolution C# bindings for mono
@@ -11,7 +11,6 @@ License: GPL
 Group: Development/Other
 Url: http://www.gnome.org
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: evolution-devel >= 2.5
 BuildRequires: evolution-data-server-devel >= 1.5
 BuildRequires: mono-devel
 BuildRequires: gtk-sharp2
