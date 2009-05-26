@@ -1,5 +1,5 @@
 %define name evolution-sharp
-%define version 0.20.0
+%define version 0.21.1
 %define release %mkrel 1
 
 Summary: Evolution C# bindings for mono
