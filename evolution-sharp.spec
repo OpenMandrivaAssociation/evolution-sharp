@@ -1,12 +1,13 @@
 %define name evolution-sharp
 %define version 0.21.1
-%define release %mkrel 1
+%define release %mkrel 2
 
 Summary: Evolution C# bindings for mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
+Patch0: evolution-sharp-0.21.1-adopt-newer-evo.patch
 License: GPL
 Group: Development/Other
 Url: http://www.gnome.org
@@ -15,6 +16,7 @@ BuildRequires: evolution-data-server-devel >= 1.5
 BuildRequires: mono-devel
 BuildRequires: gtk-sharp2
 BuildRequires: gtk-sharp2-devel
+BuildRequires: gnome-common
 Requires: evolution
 
 %description
@@ -23,8 +25,10 @@ libraries.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+NOCONFIGURE=yes gnome-autogen.sh
 %configure2_5x
 %make
 
