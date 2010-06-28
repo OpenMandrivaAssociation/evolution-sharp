@@ -1,13 +1,16 @@
 %define name evolution-sharp
 %define version 0.21.1
-%define release %mkrel 4
+%define release %mkrel 5
 
 Summary: Evolution C# bindings for mono
 Name: %{name}
 Version: %{version}
 Release: %{release}
 Source0: http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
-Patch0: evolution-sharp-0.21.1-adopt-newer-evo.patch
+# (fc) fix eds detection (Fedora)
+Patch0: evolution-sharp-0.21.1-fix-retarded-version-check.patch
+# (fc) fix eds major for eds >= 2.30.2
+Patch1:	evolution-sharp-0.21.1-fix-eds-major.patch
 License: GPL
 Group: Development/Other
 Url: http://www.gnome.org
@@ -26,9 +29,11 @@ libraries.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1 -b .fixmajor
 
-%build
+#needed by patches 0, 1
 NOCONFIGURE=yes gnome-autogen.sh
+%build
 %configure2_5x
 %make
 
