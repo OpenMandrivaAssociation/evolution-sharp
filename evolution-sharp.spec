@@ -1,6 +1,6 @@
 %define name evolution-sharp
 %define version 0.21.1
-%define release %mkrel 5
+%define release %mkrel 6
 
 Summary: Evolution C# bindings for mono
 Name: %{name}
@@ -26,6 +26,15 @@ Requires: evolution
 Evolution# is a .NET language binding for various Ximian Evolution (tm)
 libraries.
 
+%package devel
+Summary: Evolution C# bindings for mono
+Group: Development/Other
+Requires: %name = %version-%release
+
+%description devel
+Evolution# is a .NET language binding for various Ximian Evolution (tm)
+libraries.
+
 %prep
 %setup -q
 %patch0 -p1
@@ -35,7 +44,7 @@ libraries.
 NOCONFIGURE=yes gnome-autogen.sh
 %build
 %configure2_5x
-%make
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -47,10 +56,14 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(-,root,root)
-%doc README MAINTAINERS AUTHORS ChangeLog
+%doc README MAINTAINERS AUTHORS
 %_prefix/lib/mono/evolution-sharp/
 %_prefix/lib/mono/gac/evolution-sharp/
 %_libdir/libevolutionglue.so
+
+%files devel
+%defattr(-,root,root)
+%doc ChangeLog
 %_libdir/pkgconfig/evolution-sharp.pc
 %_datadir/gapi-2.0/evolution-api.xml
 
