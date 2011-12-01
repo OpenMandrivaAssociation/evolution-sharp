@@ -47,12 +47,12 @@ NOCONFIGURE=yes gnome-autogen.sh
 make
 
 %install
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 %makeinstall_std
 rm -f %buildroot%_libdir/lib*a
 
 %clean
-rm -rf $RPM_BUILD_ROOT
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
