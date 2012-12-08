@@ -1,0 +1,24 @@
+diff -urN evolution-sharp-0.21.1/glue/cal/e-cal-glue-comp.h evolution-sharp-0.21.1-patched/glue/cal/e-cal-glue-comp.h
+--- evolution-sharp-0.21.1/glue/cal/e-cal-glue-comp.h	2009-05-26 18:25:06.000000000 +1100
++++ evolution-sharp-0.21.1-patched/glue/cal/e-cal-glue-comp.h	2012-09-04 18:11:12.161449114 +1100
+@@ -1,7 +1,7 @@
+ #ifndef _E_CAL_GLUE_COMPONENT_H_
+ #define _E_CAL_GLUE_COMPONENT_H_
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ #include <time.h>
+ #include <glib-object.h>
+ #include <libecal/e-cal.h>
+diff -urN evolution-sharp-0.21.1/glue/cal/e-cal-glue-recur.h evolution-sharp-0.21.1-patched/glue/cal/e-cal-glue-recur.h
+--- evolution-sharp-0.21.1/glue/cal/e-cal-glue-recur.h	2009-05-26 18:25:06.000000000 +1100
++++ evolution-sharp-0.21.1-patched/glue/cal/e-cal-glue-recur.h	2012-09-04 18:11:19.719449034 +1100
+@@ -1,7 +1,7 @@
+ #ifndef _E_CAL_GLUE_RECUR_H_
+ #define _E_CAL_GLUE_RECUR_H_
+ 
+-#include <glib/gmacros.h>
++#include <glib.h>
+ #include <time.h>
+ #include <glib-object.h>
+ #include <libical/icalrecur.h>
