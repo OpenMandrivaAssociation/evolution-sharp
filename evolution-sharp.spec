@@ -4,7 +4,7 @@ Version:	0.21.1
 Release:	12
 License:	GPL
 Group:		Development/Other
-Url:		http://www.gnome.org
+Url:		https://www.gnome.org
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/%name/%{name}-%{version}.tar.bz2
 # (fc) fix eds detection (Fedora)
 Patch0:		evolution-sharp-0.21.1-fix-retarded-version-check.patch
