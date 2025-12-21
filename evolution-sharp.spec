@@ -11,6 +11,11 @@ Patch0:		evolution-sharp-0.21.1-fix-retarded-version-check.patch
 # (fc) fix eds major for eds >= 2.30.2
 Patch1:		evolution-sharp-0.21.1-fix-eds-major.patch
 Patch2:		evolution-sharp-0.21.1-glib.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(libecal-1.2)
 BuildRequires:	pkgconfig(libebook-1.2)
 BuildRequires:	mono-devel
